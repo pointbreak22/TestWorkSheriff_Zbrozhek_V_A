@@ -25,8 +25,6 @@ namespace Exercise_1_СreateReceipt
 
         public void Gemerate()
         {
-            // tape.CountChecks = 20;
-
             tape.Checks = new List<Check>();
             double sumChecks = 0;
             for (int i = 0; i < 100; i++)

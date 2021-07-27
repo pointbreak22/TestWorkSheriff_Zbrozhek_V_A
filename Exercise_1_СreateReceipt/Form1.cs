@@ -38,7 +38,6 @@ namespace Exercise_1_СreateReceipt
 
         private void WriteChectTape(string type)
         {
-            // MessageBox.Show(type);
             if (!RoundArray.ContainsKey(type))
             {
                 MessageBox.Show("Указанного варианта не существует");
@@ -46,7 +45,7 @@ namespace Exercise_1_СreateReceipt
             }
             Rounds rounds = RoundArray[type];
             richTextBox1.Clear();
-            //  MessageBox.Show(rounds.type);
+
             for (int i = 0; i < generator.tape.Checks.Count; i++)
             {
                 var Checks = generator.tape.Checks;
