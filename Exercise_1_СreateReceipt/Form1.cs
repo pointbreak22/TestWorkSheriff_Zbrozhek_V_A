@@ -45,6 +45,7 @@ namespace Exercise_1_СreateReceipt
             }
             Rounds rounds = RoundArray[type];
             richTextBox1.Clear();
+            richTextBox1.SelectedText = "Итого: Всего чеков -" + generator.tape.CountChecks.ToString() + " Общая сумма -" + rounds.DoRound(generator.tape.SumAllChecks).ToString(rounds.tostring) + "\n\n";
 
             for (int i = 0; i < generator.tape.Checks.Count; i++)
             {
@@ -58,7 +59,6 @@ namespace Exercise_1_СreateReceipt
                     richTextBox1.SelectedText = " - №- " + LineInChecks[j].Number.ToString() + " - К-во- " + LineInChecks[j].Count.ToString() + " - Цена- " + LineInChecks[j].Price.ToString() + " - Общая цена- " + rounds.DoRound(LineInChecks[j].SumPrice).ToString(rounds.tostring) + " - \n";
                 }
             }
-            richTextBox1.SelectedText = "Итого: Всего чеков -" + generator.tape.CountChecks.ToString() + " Общая сумма -" + rounds.DoRound(generator.tape.SumAllChecks).ToString(rounds.tostring);
         }
 
         private void radioRound1_CheckedChanged(object sender, EventArgs e)

@@ -46,6 +46,7 @@ namespace Exercise_2_CopyPaste
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            richTextBox1.Clear();
             foreach (ListViewItem item in listView1.SelectedItems)
             {
                 richTextBox1.SelectedText = item.Text.ToString() + "\n";
@@ -105,6 +106,11 @@ namespace Exercise_2_CopyPaste
             {
                 textBox2.Text = fbd.SelectedPath;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "Для копирования нажмите на кнопку отобразить, Выделите файлы которые отображаются на систе и нажмите на кнопку копировать";
         }
     }
 }
