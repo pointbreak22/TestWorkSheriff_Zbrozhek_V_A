@@ -32,20 +32,13 @@ namespace Exercise_2_CopyPaste
             backgroundWorkers = new List<BackgroundWorker>();
             listSourse = new List<string>();
             listTarget = new List<string>();
-
             loading.AutoScroll = true;
             loading.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
-        //public void Open()
-        //{
-        //    loading.Show();
-        //}
-
         private void Worker_DoWork(object sender, DoWorkEventArgs e)
         {
             int i = backgroundWorkers.IndexOf(sender as BackgroundWorker);
-
             CopyFile(listSourse[i], listTarget[i], i);
         }
 
@@ -75,7 +68,7 @@ namespace Exercise_2_CopyPaste
                 loading.Close();
                 listSourse.Clear();
                 listTarget.Clear();
-                //loading.Dispose();
+
                 count = 0;
                 n = 0;
             }

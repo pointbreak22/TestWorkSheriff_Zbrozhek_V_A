@@ -42,8 +42,6 @@ namespace Exercise_2_CopyPaste
             }
         }
 
-        private int i = 0;
-
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             richTextBox1.Clear();
@@ -55,7 +53,6 @@ namespace Exercise_2_CopyPaste
 
         private void buttonCopy_Click(object sender, EventArgs e)
         {
-            //   if (  viewLoading.loading.IsDisposed)
             if (!viewLoading.loading.Created || viewLoading.loading == null || viewLoading.loading.IsDisposed)
             {
                 viewLoading.loading = new Loading();
